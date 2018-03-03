@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0"
+define config.version = "v0.0.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -34,7 +34,7 @@ define gui.about = _p("""
 ## 在生成的发布版中，可执行文件和目录所使用的短名称。此处必须是仅 ASCII 字符，并
 ## 且不得包含空格、冒号和分号。
 
-define build.name = "abcsstory"
+define build.name = "abc-story"
 
 
 ## 音效和音乐 #######################################################################
@@ -131,7 +131,7 @@ default preferences.afm_time = 15
 ##
 ## 该命令一般不应变更，若要变更，应为有效字符串而不是表达式。
 
-define config.save_directory = "abcsstory-1520084203"
+define config.save_directory = "abc-story"
 
 
 ## 图标 ##########################################################################
@@ -164,6 +164,9 @@ init python:
     ## 将文件列为 None 来使其从已生成的分发版中排除。
 
     build.classify('**~', None)
+    build.classify('**/*.rpy', None)
+    build.classify('**/*.rpymc', None)
+    build.classify('**/cache/*', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)

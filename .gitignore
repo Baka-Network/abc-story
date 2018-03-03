@@ -1,0 +1,5 @@
+*.rpyc
+*.rpymc
+cache/
+log.txt
+saves/
